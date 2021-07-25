@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.container_header {
+    width: 100%;
+    height: 90px;
+    background: red;
+    display: flex;
+    position: fixed;
+}
+
+.logo {
+    width: 60px;
+    height: 30px;
+    padding: 0 55px;
+}
+
+.image_logo {
+    height: 62px;
+    padding-top: 28px;
+    border-right: 1px solid white;
+}
+
+.nav {
+    display: flex;
+    padding-left: 200px;
+    color: white;
+    align-items: center;
+}
+
+.search {
+    color: white;
+    padding: 8px;
+    border-radius: 18px;
+    padding-top: 10px;
+}
+
+.search:hover {
+    background: white;
+    color: red;
+}
+
+.english:hover {
+    background: white;
+    color: red;
+}
+
+#search {
+    padding-right: 10px;
+}
+
+.english {
+    color: white;
+    border-radius: 17px;
+    padding: 6px;
+    border: 1px solid white;
+    background: red;
+}
+
+.right_nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav_child {
+    padding: 0 20px;
+}
+.image_single{
+    width: 100%;
+   height: 600px;
+    padding-top:50px;
+}
+.back_left{
+    position: absolute;
+    font-size: 30px;
+    left: 60px;
+    top: 60%;
+    color: white;
+}
+.back_right{
+    position: absolute;
+    font-size: 36px;
+    color:white;
+    right:60px;
+    top: 60%;
+}
+ .business_areas{
+    font-size: 30px;
+   padding-left: 30px;
+    border-left: 1px solid rgb(112, 111, 111);
+    margin-left: 300px;
+    line-height: 120px;
+    font-weight:900;
+    color:rgb(148, 146, 146);
+
+ }
+
+
+.business_top{
+    border-left: 1px solid rgb(74, 74, 80);
+ 
+}
+.business_bottom{
+    display: flex;
+    
+}
+#image_business{
+    height:464px;
+    width: 541px;
+}
+.aspects{
+    margin-left: 270px;
+    /* border-left: 1px solid rgb(112, 111, 111); */
+    padding-left: 30px;
+
+}
+.business_bottom{
+    background: red;
+    height: 464px;
+}
+.aspects>ul{
+    list-style: none;
+    font-size: 30px;
+    color:white;
+    padding-top:50px;
+    padding-right: 67px;
+    width: 100%;
+}
+.aspects ul>li{
+    padding:15px 0px;
+}
+.link-load{
+    color: white;
+    text-decoration: none;
+}
+.caret_right{
+    display: none !important;
+}
+.lifirst:hover .caret_right{
+    display:inline !important;
+}
+.image_news{
+   width: 100%;
+   overflow: hidden;
+
+}
+#news{
+    display: flex;
+    padding:0 30px;
+}
+.news{
+    font-size: 36px;
+    font-weight: 700;
+    color:rgb(75, 74, 74);
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 44px;
+
+}
+.box_news_first{
+    border: 1px solid #ddd;
+ flex:1;
+    display: block;
+    padding: 15px;
+    margin:0px 30px;
+
+}
+.box_news_first:hover{
+    background: red;
+    color:white;
+}
+.image_news_first{
+    overflow: hidden;
+}
+#image_news_first{
+
+    display: block;
+    height: 270px;
+}
+.box_news_second{
+    flex:1;
+}
+.text_prize{
+    padding: 20px 0px;
+}
+#text_prize{
+    display: block;
+    font-size: 18px;
+  
+}
+.box_news_child{
+    display: flex;
+    margin-bottom: 10px;
+    border: 1px solid#ddd;
+}
+.box_news_child:hover{
+    background: red;
+    color:white;
+}
+.day{
+    font-size: 30px;
+    color:rgb(190, 190, 190);
+}
+.day_month{
+    margin: 10px 18px;
+    border-right: 1px solid red;
+    padding-right: 26px;
+}
+.title_day_month{
+    padding-top: 14px;
+    font-size: 17px;
+}
+.backleft_news{
+    font-size: 40px;
+    color:rgb(190, 190, 190);
+    padding: 240px 0 0 0px;
+
+}
+.backright_news{
+    font-size: 40px;
+    color:rgb(190, 190, 190);
+    padding: 240px 20px 0 0 ;
+
+}
+.btn_news{
+    padding: 10px 30px;
+    background: red;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+.btn_news:hover{
+    cursor: grab;
+}
+#event{
+    display: flex;
+}
+.event1{
+    border-top:1px solid black;
+    flex: 1;
+}
+.event{
+    font-size: 30px;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    top: -18px;
+}
+.container_event{
+    margin-top: 85px;
+    padding-top: 87px;
+    background: rgb(228, 226, 226);
+   
+}
+.event_happen{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight:300;
+}
+.btn_event{
+    display: inline-block;
+    padding: 12px;
+    background: red;
+    margin: 30px 0 0 600px;
+}
