@@ -20,12 +20,73 @@
         <div class="nav">
             <div>Giới thiệu</div>
             <div class="nav_child"> Công ty thành viên</div>
-            <div class="nav_child">Dịch vụ</div>
-            <div class="nav_child"> Dự án</div>
-            <div class="nav_child">Sự kiện</div>
-            <div class="nav_child"> Tin tức</div>
+            <div class="nav_child">Dịch vụ
+                <ul class="sub-service">
+
+                    <li>Nghiên cứu và phát triển</li>
+
+                    <li>Thẩm định giá bất động sản</li>
+
+                    <li>Tư vấn M&A bất động sản</li>
+
+                    <li>Tư vấn phát triển dự án bất động sản </li>
+
+                    <li>Tiếp thị và phân phối bất động sản </li>
+
+                    <li>Quản lý - vận hành bất động sản</li>
+                </ul>
+            </div>
+            <div class="nav_child"> Dự án
+                <ul class="sub-project ">
+
+                    <li>Căn hộ</li>
+
+                    <li>Đất nền</li>
+
+                    <li>Bất động sản nghỉ dưỡng</li>
+
+                    <li>Biệt thự </li>
+                </ul>
+            </div>
+            <div class="nav_child">Sự kiện
+                <ul class="sub-events">
+
+                    <li>Sự kiện sắp diễn ra</li>
+
+                    <li>Sự kiện đã diễn ra</li>
+
+                    <li>Điểm tin thị trường</li>
+                </ul>
+            </div>
+            <div class="nav_child"> Tin tức
+                <ul class="sub-news">
+
+                    <li>Tin DKRA Vietnam</li>
+
+
+                    <li>Tin thị trường</li>
+
+
+                    <li>Tin dự án</li>
+
+
+                    <li>Bản tin nội bộ</li>
+
+
+                    <li>Hoạt động xã hội</li>
+                </ul>
+            </div>
             <div class="nav_child">Thư viện</div>
-            <div class="nav_child">Tuyển dụng</div>
+            <div class="nav_child">Tuyển dụng
+                <ul class="sub-recruitment">
+
+                    <li>Phát triển sự nghiệp cùng DKRA Vietnam</li>
+
+                    <li>Chính sách nhân sự</li>
+
+                    <li>Cơ hội nghề nghiệp</li>
+                </ul>
+            </div>
             <div class="nav_child"> liên hệ</div>
 
         </div>
@@ -227,7 +288,8 @@
         <div class="image_event">
             <div id="image_event">
 
-               <a onclick=" plusSlideEvent()"><i class="backleft_event fas fa-chevron-left"></i></a>
+                <a onclick="changeSlideLeft()">
+                    <i class="backleft_event fas fa-chevron-left"></i></a>
 
 
                 <div class="image_event_child">
@@ -290,7 +352,8 @@
                 </div>
                 <div class="image_event_child">
                     <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/bc-rd-thang-3/1200x600new.jpg" id="image_child" alt="">
+                        <img src="http://dkra.vn/pictures/catalog/bc-rd-thang-3/1200x600new.jpg" id="image_child"
+                            alt="">
                     </div>
                     <div class="">
                         <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
@@ -304,7 +367,8 @@
                 </div>
                 <div class="image_event_child">
                     <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/bao-cao-r-d/1200x628-quang-cao-FB-01-01.jpg" id="image_child" alt="">
+                        <img src="http://dkra.vn/pictures/catalog/bao-cao-r-d/1200x628-quang-cao-FB-01-01.jpg"
+                            id="image_child" alt="">
                     </div>
                     <div class="">
                         <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
@@ -316,16 +380,15 @@
                         <span class="day_year_event">07-2021</span>
                     </div>
                 </div>
-                <a onclick="plusSlideEvent()"><i class="backright_event fas fa-chevron-right"></i></a>
-            </div>
-            <div id="slide_event">
-                <div class="slide_event_child">
-                    <div class="slide_event_first"></div>
-                </div>
-                <div class="slide_event_second">
-                    <div class="slide_event_first"></div>
+                <a onclick="plusSlideEvent()">
+                    <i class="backright_event fas fa-chevron-right"></i></a>
 
-                </div>
+            </div>
+            <div class="slide_event_end">
+
+                <div class="slide_event_child_end"></div>
+                <div class="slide_event_child_end"></div>
+
             </div>
             <button type="button" class="see_event">XEM THÊM</button>
         </div>
@@ -427,8 +490,8 @@
                 </div>
             </div>
         </div>
-        <div class="container_project_final">
-            <div id="container_project_final">
+        <div id="container_project_final">
+            <div class="container_project_final">
                 <div class="project_final_child">
                     <div id="project_final_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
@@ -437,10 +500,163 @@
                 </div>
                 <div class="project_final_text">
 
-                    <div id="back_drka_left">
+                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
                         <i class="back_drka_left fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
+                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="onclick_project">
+                        <h3 class="title_text_child">DKRA Vietnam</h3>
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                            mại
+                            tốt
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            BĐS
+                            tốt
+                            nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container_project_final">
+                <div class="project_final_child">
+                    <div id="project_final_child">
+                        <img src="http://dkra.vn/pictures/catalog/giai-thuong/2.-DKRA-n-v-phn-phi-bt-ng-sn-tt-nht-ng-Nam-.jpg"
+                            class="image_final" alt="">
+                    </div>
+                </div>
+                <div class="project_final_text">
+
+                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    </div>
+                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
+                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="onclick_project">
+                        <h3 class="title_text_child">DKRA Vietnam</h3>
+                        <p class="text_project_final">“Đơn vị phân phối bất động sản tốt nhất Đông Nam Á” do Dot
+                            Property Southest Asia Awards trao tặng 2019 và 2020</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container_project_final">
+                <div class="project_final_child">
+                    <div id="project_final_child">
+                        <img src="http://dkra.vn/pictures/catalog/giai-thuong/3.-DKRA-n-v-t-vn-pht-trin-d-n-tt-nht-ng-Nam-.jpg"
+                            class="image_final" alt="">
+                    </div>
+                </div>
+                <div class="project_final_text">
+
+                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    </div>
+                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
+                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="onclick_project">
+                        <h3 class="title_text_child">DKRA Vietnam</h3>
+                        <p class="text_project_final">“Đơn vị tư vấn phát triển dự án tốt nhất Đông Nam Á” do Dot
+                            Property Southest Asia Awards trao tặng 2020</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container_project_final">
+                <div class="project_final_child">
+                    <div id="project_final_child">
+                        <img src="http://dkra.vn/pictures/catalog/giai-thuong/4.-DKRA-n-v-phn-phi-bt-ng-sn-tt-nht-ng-Nam-.jpg"
+                            class="image_final" alt="">
+                    </div>
+                </div>
+                <div class="project_final_text">
+
+                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    </div>
+                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
+                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="onclick_project">
+                        <h3 class="title_text_child">DKRA Vietnam</h3>
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                            mại
+                            tốt
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            BĐS
+                            tốt
+                            nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container_project_final">
+                <div class="project_final_child">
+                    <div id="project_final_child">
+                        <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
+                            class="image_final" alt="">
+                    </div>
+                </div>
+                <div class="project_final_text">
+
+                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    </div>
+                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
+                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="onclick_project">
+                        <h3 class="title_text_child">DKRA Vietnam</h3>
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                            mại
+                            tốt
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            BĐS
+                            tốt
+                            nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container_project_final">
+                <div class="project_final_child">
+                    <div id="project_final_child">
+                        <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
+                            class="image_final" alt="">
+                    </div>
+                </div>
+                <div class="project_final_text">
+
+                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    </div>
+                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
+                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="onclick_project">
+                        <h3 class="title_text_child">DKRA Vietnam</h3>
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                            mại
+                            tốt
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            BĐS
+                            tốt
+                            nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container_project_final">
+                <div class="project_final_child">
+                    <div id="project_final_child">
+                        <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
+                            class="image_final" alt="">
+                    </div>
+                </div>
+                <div class="project_final_text">
+
+                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    </div>
+                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
+                            class="back_drka_right fas fa-chevron-right"></i></div>
                     <div id="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
                         <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
@@ -455,12 +671,118 @@
 
             </div>
         </div>
-
     </div>
+    <section id="container_partner">
+        <div id="partner_title">
+            <div class="partner_title_child"></div>
+            <div class="title_partner">Đối tác</div>
+            <div class="partner_title_child"></div>
+        </div>
+        <div id="company_partner">
+            <div onclick="plusSlidePartnerLeft()"><i class="backleft_partner fas fa-chevron-left"></i></div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/2.jpg" alt="CAMLY" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/3.jpg" alt="BASON" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/4.jpg" alt="Thang Long Real" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/5.jpg" alt="Nam Long" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/6.jpg" alt="COSACO" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/7.jpg" alt="HAI THANH" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/1.jpg" alt="Kiến Á" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/2.jpg" alt="CAMLY" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/3.jpg" alt="BASON" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/4.jpg" alt="Thang Long Real" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/5.jpg" alt="Nam Long" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/6.jpg" alt="COSACO" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/7.jpg" alt="HAI THANH" class="image_partner">
+            </div>
+            <div class="company_partner_child">
+                <img src="http://dkra.vn/pictures/catalog/partners/1.jpg" alt="Kiến Á" class="image_partner">
+            </div>
+            <div onclick="plusSlidePartner()">
+                <i class="backright_partner fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="map">
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB530-d3OIqy45rPHfU-okFYnoE8kAmfX4&callback=initMap&libraries=&v=weekly"
+                async></script>
+        </div>
+    </section>
+    <footer>
+        <div id="footer">
+            <div class="right_footer">
+                <h3 class="title_footer">CÔNG TY CỔ PHẦN DKRA VIỆT NAM (DKRA VIETNAM)</h3>
+                <ul class="company-info">
+                    <li class="bt-location">
+                        <i class="icon_map fas fa-map-marker-alt"></i>
+                        <p>63 - 67 An Điềm, Phường 10, Quận 5, TP HCM</p>
+                    </li>
+                    <li class="bt-phone">
+                        <i class="icon_map fas fa-mobile-alt"></i>
+                        <p>0888 10 88 99
+                        </p>
+                    </li>
+                    <li class="bt-tax">
+                        <i class="icon_footer fab fa-angrycreative"></i>
 
-    <script src="/js/main.js"></script> 
+                        <p class="text_footer">0311282011</p>
 
-
+                    </li>
+                    <li class="bt-email">
+                        <i class="icon_footer fas fa-envelope"></i>
+                        <p><a href="mailto:info@dkra.vn" class="footer_email">info@dkra.vn</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="left_footer">
+                <div class="newletter">
+                    <h3>ĐĂNG KÍ NHẬN TIN</h3>
+                    <div class="form-newletter">
+                        <form id="register_form" method="post">
+                            <input id="emailregister" name="emailregister" value="Email (*)" type="text"
+                                data-holder="Email (*)" data-error="Email không hợp lệ!" data-default="Email (*)">
+                            <button class="button-red">NHẬN TIN</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="right_footer_end">
+                    <div>
+                        <i class="icon_footer_end fab fa-facebook-square"></i>
+                        <i class="icon_footer_end fab fa-youtube"></i>
+                        <i class="icon_footer_end fab fa-html5"></i>
+                    </div>
+                    <div class="copyright">2018 <strong>DKRA VN JSC</strong>. All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
