@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick-theme.css" />
+
 </head>
 
 <body>
@@ -99,20 +103,37 @@
             </div>
         </div>
     </div>
+
     <div class="sdh">
+
         <div class="image_single_big">
             <img src="../image/letongket.jpg " class="image_single">
         </div>
-
         <div class="image_single_big">
             <img src="/html/image/hinh2.jpg" class="image_single">
         </div>
         <div class="image_single_big">
             <img src="/html/image/hinh3.jpg" class="image_single">
         </div>
-        <a onclick="plusSlide(-1)"><i class="back_left fas fa-chevron-left"></i></a>
-        <a onclick="plusSlide(1)"><i class="back_right fas fa-chevron-right"></i></a>
+
     </div>
+    <div class="tr"><i class="back_left fas fa-chevron-left"></i></div>
+    <div class="br"><i class="back_right fas fa-chevron-right"></i></div>
+    <script>
+        $(document).ready(function () {
+            $('.sdh').slick({
+                autoplay: true,
+                autoplaySpeed: 500
+            });
+        })
+        $(".back_left").click(function () {
+            $(".sdh").slick('slickPrev');
+        });
+        $(".back_right").click(function () {
+            $(".sdh").slick('slickNext')
+        })
+
+    </script>
     <div id="business">
 
         <div class="business_top">
@@ -124,7 +145,7 @@
                 <ul>
                     <li class="lifirst">
                         <i class="caret_right fas fa-caret-right"></i>
-                        Quản lý - vận hành bất động sản
+                        Nghiên cứu và phát triển
                     </li>
                     <li class="lifirst">
                         <i class="caret_right fas fa-caret-right"></i>
@@ -161,7 +182,7 @@
         <div class="news">Tin mới nhất</div>
 
         <div id="news">
-            <a onclick="plusSlides(-1)"><i class="backleft_news fas fa-chevron-left"></i></a>
+            <a><i class="backleft_news fas fa-chevron-left"></i></a>
             <div id="container_news_child">
                 <div class="box_news_first">
                     <div class="newschild">
@@ -210,18 +231,27 @@
                                 quốc tế, DKRA Vietnam đã được vinh danh ở 3 hạng mục giải thưởng quan trọng.</p>
                         </div>
                     </div>
-                </div>
-                <div class="slide_news">
-                    <!-- <div class="slide_event_second" onclick="slideNews(1)"> -->
-                    <div class="slide_event" onclick="slideNews(1)"></div>
-                    <div class="slide_event" onclick="slideNews(2)"></div>
-                    <div class="slide_event" onclick="slideNews(3)"></div>
+
                 </div>
             </div>
+            <a><i class="backright_news fas fa-chevron-right"></i></a>
+            <script>
 
-            <a onclick="plusSlides(1)"><i class="backright_news fas fa-chevron-right"></i></a>
+                $(document).ready(function () {
+                    $('.box_news_first').slick({
+                        dots: true,
+                        autoplay: true,
+                        autoplaySpeed: 500
+                    });
+                })
+                $(".backleft_news").click(function () {
+                    $(".box_news_first").slick('slickPrev');
+                });
+                $(".backright_news").click(function () {
+                    $(".box_news_first").slick('slickNext')
+                })
 
-
+            </script>
             <div class="box_news_second">
                 <div class="box_news_child">
                     <div class="day_month">
@@ -285,37 +315,28 @@
                 <a href="" class=event_happen>SỰ KIỆN ĐÃ DIỄN RA</a>
             </div>
         </div>
-        <div class="image_event">
-            <div id="image_event">
-
-                <a onclick="changeSlideLeft()">
-                    <i class="backleft_event fas fa-chevron-left"></i></a>
-
+        <div id="image_event">
+            <i class="backleft_event fas fa-chevron-left"></i>
+            <div class="image_event">
 
                 <div class="image_event_child">
                     <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/rd-42021/1200x600-2.jpg" id="image_child" alt="">
+                        <img src="http://dkra.vn/pictures/catalog/rd-42021/1200x600-2.jpg" class="ta" alt="">
                     </div>
-                    <div class="">
-                        <h3 class="text_event">BÁO CÁO THỊ TRƯỜNG BĐS NHÀ Ở TP.HCM & VÙNG PHỤ CẬN QUÝ 1/2021</h3>
-                    </div>
+                    <h3 class="text_event">BÁO CÁO THỊ TRƯỜNG BĐS NHÀ Ở TP.HCM & VÙNG PHỤ CẬN QUÝ 1/2021</h3>
+
                     <div class="day_event">
                         <span class="numberseven">07</span>
                         <span class="day_year_event">01-2021</span>
                     </div>
                 </div>
                 <div class="image_event_child">
-                    <div class="">
-                        <div class="image_child_second">
-                            <img src="http://dkra.vn/pictures/catalog/1-rd-tong-2020/1200x600-1.png" id="image_child"
-                                alt="">
-                        </div>
+                    <div class="image_child_second">
+                        <img src="http://dkra.vn/pictures/catalog/1-rd-tong-2020/1200x600-1.png" class="ta" alt="">
                     </div>
-                    <div class="">
-                        <h3 class="text_event">BÁO CÁO TOÀN CẢNH THỊ TRƯỜNG BĐS NHÀ Ở TP.HCM & VÙNG PHỤ CẬN: LỰC ĐẨY
-                            THỊ
-                            TRƯỜNG 2021</h3>
-                    </div>
+                    <h3 class="text_event">BÁO CÁO TOÀN CẢNH THỊ TRƯỜNG BĐS NHÀ Ở TP.HCM & VÙNG PHỤ CẬN: LỰC ĐẨY
+                        THỊ
+                        TRƯỜNG 2021</h3>
                     <div class="day_event">
                         <span class="numberseven">10</span>
                         <span class="day_year_event">08-2021</span>
@@ -323,14 +344,12 @@
                 </div>
                 <div class="image_event_child">
                     <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/Untitled-1.jpg" id="image_child" alt="">
+                        <img src="http://dkra.vn/pictures/catalog/Untitled-1.jpg" class="ta" alt="">
 
                     </div>
-                    <div class="">
-                        <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
-                            DOT
-                            PROPERTY VIETNAM AWARDS 2020</h3>
-                    </div>
+                    <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
+                        DOT
+                        PROPERTY VIETNAM AWARDS 2020</h3>
                     <div class="day_event">
                         <span class="numberseven">23</span>
                         <span class="day_year_event">07-2021</span>
@@ -338,22 +357,20 @@
                 </div>
                 <div class="image_event_child">
                     <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/tab-su-kien/1200x600.jpg" id="image_child" alt="">
+                        <img src="http://dkra.vn/pictures/catalog/tab-su-kien/1200x600.jpg" class="ta" alt="">
                     </div>
-                    <div class="">
-                        <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
-                            DOT
-                            PROPERTY VIETNAM AWARDS 2020</h3>
-                    </div>
+                    <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
+                        DOT
+                        PROPERTY VIETNAM AWARDS 2020</h3>
                     <div class="day_event">
                         <span class="numberseven">23</span>
                         <span class="day_year_event">07-2021</span>
                     </div>
                 </div>
+
                 <div class="image_event_child">
                     <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/bc-rd-thang-3/1200x600new.jpg" id="image_child"
-                            alt="">
+                        <img src="http://dkra.vn/pictures/catalog/bc-rd-thang-3/1200x600new.jpg" class="ta" alt="">
                     </div>
                     <div class="">
                         <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
@@ -368,7 +385,7 @@
                 <div class="image_event_child">
                     <div class="image_child_second">
                         <img src="http://dkra.vn/pictures/catalog/bao-cao-r-d/1200x628-quang-cao-FB-01-01.jpg"
-                            id="image_child" alt="">
+                            class="ta" alt="">
                     </div>
                     <div class="">
                         <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
@@ -380,10 +397,33 @@
                         <span class="day_year_event">07-2021</span>
                     </div>
                 </div>
-                <a onclick="plusSlideEvent()">
-                    <i class="backright_event fas fa-chevron-right"></i></a>
-
             </div>
+
+            <i class="backright_event fas fa-chevron-right"></i>
+
+
+            <script>
+
+                $(document).ready(function () {
+
+                    $('.image_event').slick({
+                            
+                        infinite: true,
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        // autoplay: true,
+                        // autoplaySpeed: 1000
+                        dots: true
+                    });
+
+                })
+                $(".backleft_event").click(function () {
+                    $(".image_event").slick('slickPrev')
+                })
+                $(".backright_event").click(function () {
+                    $(".image_event").slick('slickNext')
+                })
+            </script>
             <div class="slide_event_end">
 
                 <div class="slide_event_child_end"></div>
@@ -391,6 +431,7 @@
 
             </div>
             <button type="button" class="see_event">XEM THÊM</button>
+
         </div>
     </div>
     <div class="container_project">
@@ -500,11 +541,10 @@
                 </div>
                 <div class="project_final_text">
 
-                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+                    <div id="back_drka_left">
                         <i class="back_drka_left fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
-                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
                     <div id="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
                         <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
@@ -527,19 +567,18 @@
                 </div>
                 <div class="project_final_text">
 
-                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+
+                    <div id="back_drka_left">
                         <i class="back_drka_left fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
-                            class="back_drka_right fas fa-chevron-right"></i></div>
-                    <div id="onclick_project">
-                        <h3 class="title_text_child">DKRA Vietnam</h3>
-                        <p class="text_project_final">“Đơn vị phân phối bất động sản tốt nhất Đông Nam Á” do Dot
-                            Property Southest Asia Awards trao tặng 2019 và 2020</p>
-                    </div>
+                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
+                    <h3 class="title_text_child">DKRA Vietnam</h3>
+                    <p class="text_project_final">“Đơn vị phân phối bất động sản tốt nhất Đông Nam Á” do Dot
+                        Property Southest Asia Awards trao tặng 2019 và 2020</p>
                 </div>
-
             </div>
+
+
             <div class="container_project_final">
                 <div class="project_final_child">
                     <div id="project_final_child">
@@ -549,11 +588,11 @@
                 </div>
                 <div class="project_final_text">
 
-                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+
+                    <div id="back_drka_left">
                         <i class="back_drka_left fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
-                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
                     <div id="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
                         <p class="text_project_final">“Đơn vị tư vấn phát triển dự án tốt nhất Đông Nam Á” do Dot
@@ -571,11 +610,11 @@
                 </div>
                 <div class="project_final_text">
 
-                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+
+                    <div id="back_drka_left">
                         <i class="back_drka_left fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
-                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
                     <div id="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
                         <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
@@ -598,11 +637,11 @@
                 </div>
                 <div class="project_final_text">
 
-                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+
+                    <div id="back_drka_left">
                         <i class="back_drka_left fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
-                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
                     <div id="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
                         <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
@@ -625,11 +664,11 @@
                 </div>
                 <div class="project_final_text">
 
-                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+
+                    <div id="back_drka_left">
                         <i class="back_drka_left fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
-                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
                     <div id="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
                         <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
@@ -651,12 +690,10 @@
                     </div>
                 </div>
                 <div class="project_final_text">
-
-                    <div id="back_drka_left" onclick="changeProjectChild(-1)">
+                    <div id="back_drka_left">
                         <i class="back_drka_left fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right" onclick="changeProjectChild(1)"><i
-                            class="back_drka_right fas fa-chevron-right"></i></div>
+                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
                     <div id="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
                         <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
@@ -672,60 +709,100 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('#container_project_final').slick({
+
+            });
+        })
+        $(".back_drka_left").click(function () {
+            $("#container_project_final").slick('slickPrev');
+        });
+        $(".back_drka_right").click(function () {
+            $("#container_project_final").slick('slickNext')
+        })
+    </script>
     <section id="container_partner">
         <div id="partner_title">
             <div class="partner_title_child"></div>
             <div class="title_partner">Đối tác</div>
             <div class="partner_title_child"></div>
         </div>
-        <div id="company_partner">
-            <div onclick="plusSlidePartnerLeft()"><i class="backleft_partner fas fa-chevron-left"></i></div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/2.jpg" alt="CAMLY" class="image_partner">
+
+        <div class="all_image_partner">
+            <i class="backleft_partner fas fa-chevron-left"></i>
+            <div class="company_partner">
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/2.jpg" alt="CAMLY" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/3.jpg" alt="BASON" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/4.jpg" alt="Thang Long Real"
+                        class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/5.jpg" alt="Nam Long" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/6.jpg" alt="COSACO" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/7.jpg" alt="HAI THANH" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/1.jpg" alt="Kiến Á" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/2.jpg" alt="CAMLY" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/3.jpg" alt="BASON" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/4.jpg" alt="Thang Long Real"
+                        class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/5.jpg" alt="Nam Long" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/6.jpg" alt="COSACO" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/7.jpg" alt="HAI THANH" class="image_partner">
+                </div>
+                <div class="company_partner_child">
+                    <img src="http://dkra.vn/pictures/catalog/partners/1.jpg" alt="Kiến Á" class="image_partner">
+                </div>
+
             </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/3.jpg" alt="BASON" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/4.jpg" alt="Thang Long Real" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/5.jpg" alt="Nam Long" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/6.jpg" alt="COSACO" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/7.jpg" alt="HAI THANH" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/1.jpg" alt="Kiến Á" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/2.jpg" alt="CAMLY" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/3.jpg" alt="BASON" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/4.jpg" alt="Thang Long Real" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/5.jpg" alt="Nam Long" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/6.jpg" alt="COSACO" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/7.jpg" alt="HAI THANH" class="image_partner">
-            </div>
-            <div class="company_partner_child">
-                <img src="http://dkra.vn/pictures/catalog/partners/1.jpg" alt="Kiến Á" class="image_partner">
-            </div>
-            <div onclick="plusSlidePartner()">
-                <i class="backright_partner fas fa-chevron-right"></i>
-            </div>
+            <i class="backright_partner fas fa-chevron-right"></i>
         </div>
+
+
+        <script>
+            $(document).ready(function () {
+
+                $('.company_partner').slick({
+
+                    infinite: true,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1000
+
+                });
+
+            })
+            $(".backleft_partner").click(function () {
+                $(".company_partner").slick('slickPrev')
+            })
+            $(".backright_partner").click(function () {
+                $(".company_partner").slick('slickNext')
+            })
+        </script>
     </section>
     <section>
         <div id="map">
@@ -782,7 +859,9 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="/slick/slick-1.8.1/slick/slick.min.js"></script>
     <script src="/js/main.js"></script>
+
 </body>
 
 </html>
