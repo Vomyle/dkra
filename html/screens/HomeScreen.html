@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick-theme.css" />
 
+
 </head>
 
 <body>
@@ -316,7 +317,9 @@
             </div>
         </div>
         <div id="image_event">
-            <i class="backleft_event fas fa-chevron-left"></i>
+            <div onclick="changeSlideLeft()">
+                <i class="backleft_event fas fa-chevron-left"></i>
+            </div>
             <div class="image_event">
 
                 <div class="image_event_child">
@@ -399,35 +402,12 @@
                 </div>
             </div>
 
-            <i class="backright_event fas fa-chevron-right"></i>
-
-
-            <script>
-
-                $(document).ready(function () {
-
-                    $('.image_event').slick({
-                            
-                        infinite: true,
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                        // autoplay: true,
-                        // autoplaySpeed: 1000
-                        dots: true
-                    });
-
-                })
-                $(".backleft_event").click(function () {
-                    $(".image_event").slick('slickPrev')
-                })
-                $(".backright_event").click(function () {
-                    $(".image_event").slick('slickNext')
-                })
-            </script>
+            <div onclick="plusSlideEvent()"><i class="backright_event fas fa-chevron-right"></i></div>
+            
             <div class="slide_event_end">
 
-                <div class="slide_event_child_end"></div>
-                <div class="slide_event_child_end"></div>
+                <div onclick="changeSlideLeft()" class="slide_event_child_end"></div>
+                <div  onclick="plusSlideEvent()" class="slide_event_child_end"></div>
 
             </div>
             <button type="button" class="see_event">XEM THÊM</button>
@@ -534,18 +514,18 @@
         <div id="container_project_final">
             <div class="container_project_final">
                 <div class="project_final_child">
-                    <div id="project_final_child">
+                    <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
                             class="image_final" alt="">
                     </div>
                 </div>
                 <div class="project_final_text">
 
-                    <div id="back_drka_left">
-                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    <div class="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="icon_project_left_child fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
-                    <div id="onclick_project">
+
+                    <div class="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
                         <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
                             mại
@@ -555,12 +535,15 @@
                             tốt
                             nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
                     </div>
-                </div>
+                    <div class="back_drka_right" onclick="changeProjectChild(1)">
+                        <i class="icon_project_right_child fas fa-chevron-right"></i>
+                    </div>
 
+                </div>
             </div>
             <div class="container_project_final">
                 <div class="project_final_child">
-                    <div id="project_final_child">
+                    <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/2.-DKRA-n-v-phn-phi-bt-ng-sn-tt-nht-ng-Nam-.jpg"
                             class="image_final" alt="">
                     </div>
@@ -568,20 +551,22 @@
                 <div class="project_final_text">
 
 
-                    <div id="back_drka_left">
-                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    <div class="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="icon_project_left_child fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
+
                     <h3 class="title_text_child">DKRA Vietnam</h3>
                     <p class="text_project_final">“Đơn vị phân phối bất động sản tốt nhất Đông Nam Á” do Dot
                         Property Southest Asia Awards trao tặng 2019 và 2020</p>
+                    <div class="back_drka_right" onclick="changeProjectChild(1)">
+                        <i class="icon_project_right_child fas fa-chevron-right"></i>
+                    </div>
                 </div>
+
             </div>
-
-
             <div class="container_project_final">
                 <div class="project_final_child">
-                    <div id="project_final_child">
+                    <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/3.-DKRA-n-v-t-vn-pht-trin-d-n-tt-nht-ng-Nam-.jpg"
                             class="image_final" alt="">
                     </div>
@@ -589,21 +574,25 @@
                 <div class="project_final_text">
 
 
-                    <div id="back_drka_left">
-                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    <div class="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="icon_project_left_child fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
-                    <div id="onclick_project">
+                    <div class="back_drka_right" onclick="changeProjectChild(1)">
+                        <i class="icon_project_right_child  fas fa-chevron-right"></i>
+                    </div>
+                    <div class="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
-                        <p class="text_project_final">“Đơn vị tư vấn phát triển dự án tốt nhất Đông Nam Á” do Dot
+                        <p class="text_project_final">“Đơn vị tư vấn phát triển dự án tốt nhất Đông Nam Á” do
+                            Dot
                             Property Southest Asia Awards trao tặng 2020</p>
-                    </div>
-                </div>
 
+                    </div>
+
+                </div>
             </div>
             <div class="container_project_final">
                 <div class="project_final_child">
-                    <div id="project_final_child">
+                    <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/4.-DKRA-n-v-phn-phi-bt-ng-sn-tt-nht-ng-Nam-.jpg"
                             class="image_final" alt="">
                     </div>
@@ -611,16 +600,21 @@
                 <div class="project_final_text">
 
 
-                    <div id="back_drka_left">
-                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    <div class="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="icon_project_left_child fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
-                    <div id="onclick_project">
+                    <div class="back_drka_right" onclick="changeProjectChild(1)">
+                        <i class="icon_project_right_child  fas fa-chevron-right"></i>
+                    </div>
+                    <div class="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
-                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS
+                            thương
                             mại
                             tốt
-                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn
+                            tiếp
+                            thị
                             BĐS
                             tốt
                             nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
@@ -630,7 +624,7 @@
             </div>
             <div class="container_project_final">
                 <div class="project_final_child">
-                    <div id="project_final_child">
+                    <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
                             class="image_final" alt="">
                     </div>
@@ -638,26 +632,32 @@
                 <div class="project_final_text">
 
 
-                    <div id="back_drka_left">
-                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    <div class="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="icon_project_left_child fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
-                    <div id="onclick_project">
+                    <div class="back_drka_right" onclick="changeProjectChild(1)">
+                        <i class="icon_project_right_child  fas fa-chevron-right"></i>
+                    </div>
+                    <div class="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
-                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS
+                            thương
                             mại
                             tốt
-                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn
+                            tiếp
+                            thị
                             BĐS
                             tốt
                             nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
                     </div>
+
                 </div>
 
             </div>
             <div class="container_project_final">
                 <div class="project_final_child">
-                    <div id="project_final_child">
+                    <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
                             class="image_final" alt="">
                     </div>
@@ -665,63 +665,63 @@
                 <div class="project_final_text">
 
 
-                    <div id="back_drka_left">
-                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    <div class="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="icon_project_left_child fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
-                    <div id="onclick_project">
+                    <div class="back_drka_right" onclick="changeProjectChild(1)">
+                        <i class="icon_project_right_child  fas fa-chevron-right"></i>
+                    </div>
+                    <div class="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
-                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS
+                            thương
                             mại
                             tốt
-                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn
+                            tiếp
+                            thị
                             BĐS
                             tốt
                             nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
                     </div>
+
                 </div>
 
             </div>
             <div class="container_project_final">
                 <div class="project_final_child">
-                    <div id="project_final_child">
+                    <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
                             class="image_final" alt="">
                     </div>
                 </div>
                 <div class="project_final_text">
-                    <div id="back_drka_left">
-                        <i class="back_drka_left fas fa-chevron-left"></i>
+                    <div class="back_drka_left" onclick="changeProjectChild(-1)">
+                        <i class="icon_project_left_child fas fa-chevron-left"></i>
                     </div>
-                    <div id="back_drka_right"><i class="back_drka_right fas fa-chevron-right"></i></div>
-                    <div id="onclick_project">
+                    <div class="back_drka_right" onclick="changeProjectChild(1)">
+                        <i class="icon_project_right_child fas fa-chevron-right"></i>
+                    </div>
+                    <div class="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
-                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS
+                            thương
                             mại
                             tốt
-                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn
+                            tiếp
+                            thị
                             BĐS
                             tốt
                             nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
                     </div>
+
                 </div>
 
             </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function () {
-            $('#container_project_final').slick({
 
-            });
-        })
-        $(".back_drka_left").click(function () {
-            $("#container_project_final").slick('slickPrev');
-        });
-        $(".back_drka_right").click(function () {
-            $("#container_project_final").slick('slickNext')
-        })
-    </script>
     <section id="container_partner">
         <div id="partner_title">
             <div class="partner_title_child"></div>
@@ -858,9 +858,12 @@
                 </div>
             </div>
         </div>
+
     </footer>
+
     <script type="text/javascript" src="/slick/slick-1.8.1/slick/slick.min.js"></script>
     <script src="/js/main.js"></script>
+
 
 </body>
 

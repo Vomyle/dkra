@@ -383,15 +383,12 @@ button.slick-next{
     display: flex;
 }
 .image_event {
- 
+ display: flex;
     height: 294px;
     padding-top: 20px;
     width: 80%;
 }
 
-.container_project_final {
-    display: flex !important;
-}
 
 
 .ta {
@@ -427,7 +424,7 @@ button.slick-next{
 .backright_event {
     position: absolute;
     font-size: 40px;
-    margin-top: 154px;
+    margin-top: -154px;
     color: rgb(185, 185, 185);
     right: 62px;
 }
@@ -617,7 +614,9 @@ height: 4px !important;
 .image_text_project:hover {
     background: red;
 }
-
+.image_text_project:hover .poligon {
+    background: red;
+}
 .image_text_project:hover .triangle {
     background: red;
 }
@@ -699,12 +698,12 @@ height: 4px !important;
     top: -5px;
 }
 
-
-#project_final_child {
+ 
+.project_final_child_child{
     border: 10px solid  rgba(0,0,0,0.1);
 }
 
-#project_final_child:hover {
+.project_final_child_child:hover {
     background: white;
     border: 10px solid #fff;
 }
@@ -731,43 +730,43 @@ height: 4px !important;
     color: white;
 }
 
-.back_drka_left {
+.icon_project_left_child {
     font-size: 20px;
     color: white;
     padding: 10px 11px;
 }
 
-.back_drka_right {
+.icon_project_right_child {
     font-size: 20px;
     padding: 11px 15px;
     color: white;
 }
 
-#back_drka_left {
+.back_drka_left {
     position: absolute;
     top: 46%;
     left: 54px;
 }
 
-#back_drka_right {
+.back_drka_right {
     position: absolute;
     top: 46%;
     right: -49px;
 }
-
-#back_drka_left:hover {
+.back_drka_right:hover{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.back_drka_left:hover{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 1px solid white;
 }
 
-#back_drka_right:hover {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid white;
-}
+
 
 #partner_title {
     display: flex;
