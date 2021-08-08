@@ -109,5 +109,4 @@ function initMap() {
     map: map,
   });
 }
-var io=document.querySelector(".progress_back")
 

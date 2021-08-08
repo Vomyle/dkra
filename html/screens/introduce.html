@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <script>
     var progress = [
@@ -72,7 +73,9 @@
                     class="logo"></a>
         </div>
         <div class="nav">
-            <div>Giới thiệu</div>
+            <div>Giới thiệu
+                <div class="introduce_hover_main"></div>
+            </div>
             <div class="nav_child"> Công ty thành viên</div>
             <div class="nav_child">Dịch vụ
                 <ul class="sub-service">
@@ -336,9 +339,9 @@
         <div class="progress"></div>
         <div class="progress_behind"></div>
         <div class="all_back_progress">
-            <i class="backleft_progress progress_back fas fa-chevron-left"></i>
+            <div onclick="plusleft()"><i class="backleft_progress same progress_back fas fa-chevron-left"></i></div>
             <div class="between_back"></div>
-            <i class="backright_progress fas fa-chevron-right"></i>
+           <div onclick="plusright()"><i class="backright_progress same fas fa-chevron-right"></i></div>
         </div>
     </section>
 
@@ -350,6 +353,7 @@
             var createProgress = document.createElement("div")
             createProgress.id = "createProgress"
             createProgress.innerHTML = `
+            <div class="io">
                     <div class="year_progress">${progress[i].year}</div>
                     <div class="hollow_progress">
                         <div class="hollow_progress_childhollow"></div>
@@ -358,69 +362,350 @@
                      </div>
                     <div class="progress_circle"></div>
                     <div class="text_progress">${progress[i].title}</div>
-                                       `
+             </div>                     `
 
             progressElement.append(createProgress)
         }
-        $(document).ready(function () {
-            $('.progress').slick({
-                dots: true,
-                infinite: false,
-                speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
+        // $(document).ready(function () {
+        //     $('.progress').slick({
+        //         dots: true,
+        //         infinite: false,
+        //         speed: 300,
+        //         slidesToShow: 4,
+        //         slidesToScroll: 1,
+        //         responsive: [
+        //             {
+        //                 breakpoint: 1024,
+        //                 settings: {
+        //                     slidesToShow: 3,
+        //                     slidesToScroll: 3,
+        //                     infinite: true,
 
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
+        //                 }
+        //             },
+        //             {
+        //                 breakpoint: 600,
+        //                 settings: {
+        //                     slidesToShow: 2,
+        //                     slidesToScroll: 2
+        //                 }
+        //             },
+        //             {
+        //                 breakpoint: 480,
+        //                 settings: {
+        //                     slidesToShow: 1,
+        //                     slidesToScroll: 1
+        //                 }
+        //             }
                     // You can unslick at a given breakpoint now by adding:
                     // settings: "unslick"
-                    // instead of a settings object
-                ]
+        //             // instead of a settings object
+        //         ]
 
-            })
-        });
-        $(".backleft_progress").click(function () {
-            $(".progress").slick('slickPrev');
-        });
-        $(".backright_progress").click(function () {
-            $(".progress").slick('slickNext')
-        })
+        //     })
+        // });
+        // $(".backleft_progress").click(function () {
+        //     $(".progress").slick('slickPrev');
+        // });
+        // $(".backright_progress").click(function () {
+        //     $(".progress").slick('slickNext')
+        // })
+
     </script>
     <section id="organizational_chart">
         <div id="organizational_chart_child">
             <div class="organizational_chart_childhollow"></div>
             <div class="text_organizational_chart_child">Sơ đồ tổ chức</div>
-            <div  class="organizational_chart_childhollow"></div>
+            <div class="organizational_chart_childhollow"></div>
         </div>
-        <img src="http://dkra.vn/pictures/catalog/about/2021-So-do-to-chuc-02.jpg" class="img_chart" alt="Sơ đồ tổ chức">
+        <img src="http://dkra.vn/pictures/catalog/about/2021-So-do-to-chuc-02.jpg" class="img_chart"
+            alt="Sơ đồ tổ chức">
     </section>
+
+    <!-- leadership:ban lãnh đạo -->
+    <section id="container_leadership">
+        <div id="leadership_child">
+            <div class="leadership_hollow"></div>
+            <div class="text_leadership">Ban lãnh đạo</div>
+            <div class="leadership_hollow"></div>
+        </div>
+        <div>
+            <ul class="member_list">
+                <li class="item_member_list_child">
+                    <div class="item_member_list_pi">
+                        <div class="text_item_member_list">
+                            <h3>Ông <strong>Phạm Lâm</strong></h3>
+                            <p><strong>Nhà sáng lập: Chủ tịch HĐQT kiêm Tổng Giám đốc</strong></p>
+                            <p>Với kinh nghiệm hơn 10 năm hoạt động
+                                và am hiểu sâu sắc thị trường bất động sản,</p>
+                            <p>ông Phạm Lâm đã tham gia tư vấn đầu tư và phát triển nhiều dự án bất động sản lớn.
+                            </p>
+                        </div>
+                        <div class="item_member_list_hollow"></div>
+                        <div class="circle_member_list_hollow"></div>
+                        <img src="http://dkra.vn/pictures/catalog/about/new-member/AnhLam.png" class="imag_leadership"
+                            alt="Phạm Lâm">
+                    </div>
+                </li>
+                <li class="item_member_list_child">
+                    <div class="item_member_list">
+                        <img src="http://dkra.vn/pictures/catalog/about/new-member/AnhSang.png"
+                            class="imag_leadership_left" alt="Nguyễn Văn Sáng">
+                        <div class="item_member_list_hollow">
+
+                        </div>
+                        <div class="circle_member_list_hollow"></div>
+                        <div class="text_item_member_list_right">
+                            <h3>Ông <strong>Nguyễn Văn Sáng</strong></h3>
+                            <p><strong>Đồng sáng lập: Thành viên HĐQT kiêm Phó Tổng Giám đốc thường
+                                    trực.</strong></p>
+                            <p>Hơn 10 năm hoạt động chuyên nghiệp
+                                trong lĩnh vực bất động sản. Nhiều năm kinh nghiệm trong việc quản trị doanh nghiệp, am
+                                hiểu và tư vấn pháp lý nhiều dự án bất động sản.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="item_member_list_child">
+                    <div class="item_member_list_po">
+                        <div class="text_item_member_list">
+                            <h3>Ông <strong>Trần Hiếu</strong></h3>
+                            <p><strong>Thành viên HĐQT kiêm Phó Tổng
+                                    &nbsp;</strong><strong>Giám đốc khối Tiếp thị &amp; Kinh doanh.</strong></p>
+                            <p>Hơn 10 năm hoạt động chuyên nghiệp
+                                &nbsp;trong lĩnh vực bất động sản. Nhiều năm&nbsp;kinh nghiệm trong việc tổ chức,
+                                điều&nbsp;hành
+                                hệ thống kinh doanh, hoạch định&nbsp;chiến lược tiếp thị, bán hàng cho các dự&nbsp;án
+                                bất
+                                động
+                                sản.</p>
+                        </div>
+                        <div class="item_member_list_hollow"></div>
+                        <div class="circle_member_list_hollow"></div>
+                        <img src="http://dkra.vn/pictures/catalog/about/new-member/AnhHieu.png" class="imag_leadership"
+                            alt="Trần Hiếu">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <section id="Outstanding_Award">
+        <div class="Outstanding_Award_child">
+            <div class="Outstanding_Award_hollow"></div>
+            <div class="text_Outstanding_Award">Giải thưởng tiêu biểu</div>
+            <div class="Outstanding_Award_hollow"></div>
+        </div>
+        <div class="two-column">
+            <p>Với những giá trị mang đến cho khách hàng, đối tác, tâm huyết xây dựng nghề môi giới ngày càng chuyên
+                nghiệp và đóng góp tích cực vào sự phát triển của thị trường Bất động sản Việt Nam, DKRA Vietnam đã vinh
+                dự đón nhận hàng loạt giải thưởng danh giá như:
+            </p>
+            <p>Giải thưởng quốc tế:</p>
+            <p>- “Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ bất động sản thương mại tốt nhất Việt Nam”, “Hệ thống
+                phân phối bất động sản xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị bất động sản tốt nhất Việt Nam”
+                do Asia Pacific Property Awards 2021 - 2022 trao tặng
+            </p>
+            <p>- Hai năm liên tiếp là “Đơn vị phân phối bất động sản tốt nhất Đông Nam Á” do Dot Property Southest Asia
+                Awards trao tặng năm 2019 và 2020
+            </p>
+            <p>- “Đơn vị tư vấn phát triển dự án tốt nhất Đông Nam Á” do Dot Property Southest Asia Awards trao tặng năm
+                2020
+            </p>
+            <p>Giải thưởng trong nước:
+            </p>
+            <p>- Hai năm liên tiếp xếp hạng “Top 5 Công ty tư vấn và Môi giới Bất động sản Việt Nam uy tín” do Vietnam
+                Report bình chọn năm 2019 và 2020
+            </p>
+            <p>- Hai năm liên tiếp được trao giải “Top 10 sàn giao dịch Bất động sản tốt nhất” do Tạp chí điện tử Bất
+                động sản Việt Nam (Reatimes) trao tặng năm 2019 và 2020
+            </p>
+            <p>- Bốn năm liên tiếp đón nhận giải “Nhà phân phối Bất động sản tiêu biểu” do tạp chí Nhịp cầu đầu tư và
+                hội đồng các chuyên gia uy tín trao tặng năm 2017, 2018, 2019 và 2020
+            </p>
+
+            <p>- Giải thưởng quốc gia “Sàn giao dịch xuất sắc nhất Việt Nam năm 2018” do Bộ Xây dựng và Hội Bất động sản
+                Việt Nam (VNREA) bình chọn
+            </p>
+            <p>- Hai năm liên tiếp là “Đơn vị phân phối bất động sản tốt nhất Việt Nam” do Dot Property Vietnam Awards
+                trao tặng 2019 và 2020
+            </p>
+            <p>- Hai năm liên tiếp được trao giải “Top 10 Sàn giao dịch Bất động sản tiêu biểu” do Hiệp hội môi giới Bất
+                động sản Việt Nam (VARS) trao tặng năm 2018 và 2019
+            </p>
+            <p>Bên cạnh các giải thưởng lớn của DKRA Vietnam, ông Phạm Lâm – Nhà sáng lập, Chủ tịch HĐQT kiêm CEO DKRA
+                Vietnam cũng đã được vinh danh với nhiều giải thưởng lớn:
+            </p>
+            <p>- “Doanh nhân Bất động sản ấn tượng” do tạp chí Nhịp cầu đầu tư trao tặng năm 2020.
+            </p>
+            <p>- “Top 10 nhân vật truyền cảm hứng môi giới bất động sản điển hình năm 2018” do Hội Môi giới Bất động sản
+                Việt Nam (VARS) trao tặng.
+            </p>
+            <p>- "Cá nhân đóng góp tích cực cho sự phát triển của VNREA, VARS" do Hội Môi giới Bất động sản Việt Nam
+                (VARS) trao tặng.
+            </p>
+            <p>Đây là những thành quả khẳng định nỗ lực không ngừng hoàn thiện chất lượng dịch vụ của DKRA Vietnam trên
+                chặng đường trở thành THƯƠNG HIỆU DỊCH VỤ BẤT ĐỘNG SẢN ĐƯỢC TIN TƯỞNG LỰA CHỌN ĐẦU TIÊN TẠI VIỆT NAM.
+            </p>
+            <p></p>
+        </div>
+    </section>
+
+    <section id="Outstanding_Award_second">
+        <div onclick="plusSlide()"><i class="backleft ii fas fa-chevron-left"></i></div>
+        <div class="img_text_Outstanding_Award">
+
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg" alt=""
+                    class="img_Outstanding_Award">
+                <h3 class="text1">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương mại tốt nhất Việt Nam”,
+                    “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị BĐS tốt nhất Việt Nam” tại
+                    Asia Pacific Property Awards năm 2021</h3>
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/2.-DKRA-n-v-phn-phi-bt-ng-sn-tt-nht-ng-Nam-.jpg"
+                    class="img_Outstanding_Award" alt="">
+                <h3 class="text">“Đơn vị phân phối bất động sản tốt nhất Đông Nam Á” do Dot Property Southest Asia
+                    Awards trao tặng 2019 và 2020</h3>
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/3.-DKRA-n-v-t-vn-pht-trin-d-n-tt-nht-ng-Nam-.jpg"
+                    alt="" class="img_Outstanding_Award">
+                <h3 class="text">“Đơn vị tư vấn phát triển dự án tốt nhất Đông Nam Á” do Dot Property Southest Asia
+                    Awards trao tặng 2020</h3>
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/2.-DKRA-n-v-phn-phi-bt-ng-sn-tt-nht-ng-Nam-.jpg"
+                    class="img_Outstanding_Award" alt="">
+                <h3 class="text">“Đơn vị phân phối bất động sản tốt nhất Đông Nam Á” do Dot Property Vietnam Awards trao
+                    tặng 2019 và 2020</h3>
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/5.-DKRA-Top-10-sn-giao-dch-Bt-ng-sn-tt-nht.jpg"
+                    alt="" class="img_Outstanding_Award">
+                <h3 class="text">“Top 10 sàn giao dịch Bất động sản tốt nhất” do Tạp chí điện tử Bất động sản Việt Nam
+                    (Reatimes) trao tặng năm 2019 và 2020</h3>
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/6.-DKRA-Nh-phn-phi-Bt-ng-sn-tiu-biu.jpg" alt=""
+                    class="img_Outstanding_Award">
+                <h3 class="text">“Nhà phân phối Bất động sản tiêu biểu” do tạp chí Nhịp cầu đầu tư và hội đồng các
+                    chuyên gia uy tín trao tặng năm 2017, 2018, 2019 và 2020</h3>
+
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/7.-DKRA-Top-5-Cng-ty-t-vn-v-Mi-gii-Bt-ng-sn-Vit-Nam-uy-tn.jpg"
+                    alt="" class="img_Outstanding_Award">
+                <h3 class="text">“Top 5 Công ty tư vấn và Môi giới Bất động sản Việt Nam uy tín” do Vietnam Report bình
+                    chọn năm 2019 và 2020</h3>
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/8.-DKRA-Sn-giao-dch-xut-sc-nht-Vit.jpg" alt=""
+                    class="img_Outstanding_Award">
+                <h3 class="text">Giải thưởng quốc gia “Sàn giao dịch xuất sắc nhất Việt” do Bộ Xây dựng và Hội Bất động
+                    sản Việt Nam (VNREA) bình chọn năm 2018</h3>
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/9.-DKRA-Top-10-nhn-vt-truyn-cm-hng-mi-gii-bt-ng-sn-in-hnh-nm-2018.jpg"
+                    alt="" class="img_Outstanding_Award">
+                <h3 class="text1">Ông Phạm Lâm - CEO DKRA Vietnam - “Top 10 nhân vật truyền cảm hứng môi giới BĐS điển
+                    hình năm 2018”, "Cá nhân đóng góp tích cực cho sự phát triển của VNREA, VARS" (Hội Môi giới BĐS Việt
+                    Nam (VARS))</h3>
+            </div>
+            <div class="shared">
+                <img src="http://dkra.vn/pictures/catalog/giai-thuong/10.-DKRA-Doanh-nhn-Bt-ng-sn-n-tng.jpg" alt=""
+                    class="img_Outstanding_Award">
+                <h3 class="text1">Ông Phạm Lâm - CEO DKRA Vietnam được vinh danh “Doanh nhân Bất động sản ấn tượng” do
+                    tạp chí Nhịp cầu đầu tư trao tặng năm 2020</h3>
+            </div>
+        </div>
+        <div onclick="plusSlideRight()"><i class="backright ii fas fa-chevron-right"></i></div>
+        <div class="slide_outsanding">
+            <div class="slide-page" onclick="slide_one()"></div>
+            <div class="slide-page" onclick="slide_two()"></div>
+            <div class="slide-page" onclick="slide_three()"></div>
+            <div class="slide-page" onclick="slide_four()"></div>
+        </div>
+    </section>
+
+    <script>
+
+        // $(document).ready(function () {
+        //     $('.img_text_Outstanding_Award').slick({
+        //         dots: true,
+        //         infinite: false,
+        //         speed: 300,
+        //         slidesToShow: 3,
+        //         slidesToScroll: 3,
+
+        //         responsive: [
+        //             {
+
+        //                 settings: {
+        //                     slidesToShow: 2,
+        //                     slidesToScroll: 2,
+        //                     // infinite: true,
+        //                     // dots: true
+        //                 }
+        //             },
+        //             {
+
+        //                 settings: {
+        //                     // dots: true,
+
+        //                     slidesToShow: 1,
+        //                     slidesToScroll: 1
+        //                 }
+        //             },
+                    // {
+
+                    //     settings: {
+                    //         dots: true,
+
+                    //         slidesToShow: 1,
+                    //         slidesToScroll: 1
+                    //     }
+                    // }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+        //         ]
+        //     });
+        // })
+        // $(".backleft").click(function () {
+        //     $(".img_text_Outstanding_Award").slick('slickPrev');
+        // });
+        // $(".backright").click(function () {
+        //     $(".img_text_Outstanding_Award").slick('slickNext')
+        // })
+    </script>
+    <footer>
+        <div id="footer_introduce">
+            <div class="footer_introduce_child">
+                <h3>ĐĂNG KÍ NHẬN TIN</h3>
+                <div class="form-newletter_introduc">
+                    <form id="register_form" method="post">
+                        <input id="emailregister" name="emailregister" value="Email (*)" type="text"
+                            data-holder="Email (*)" data-error="Email không hợp lệ!" data-default="Email (*)">
+                        <button class="button-red">NHẬN TIN</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer_introduce_child_second">
+                <div class="copyright_introduce">2018 <strong>DKRA VN JSC</strong>. All Rights Reserved.</div>
+                <div>
+                    <i class="icon_footer_introduce fab fa-facebook-square"></i>
+                    <i class="icon_footer_introduce fab fa-youtube"></i>
+                    <i class="icon_footer_introduce fab fa-html5"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/slick/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="/js/introduce.js"></script>
     <script src=" https://unpkg.com/aos@next/dist/aos.js "></script>
     <script>
         AOS.init();
     </script>
-    <script type="text/javascript" src="/slick/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="/js/main.js"></script>
 </body>
 
 </html>
