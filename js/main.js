@@ -109,4 +109,3 @@ function initMap() {
     map: map,
   });
 }
-

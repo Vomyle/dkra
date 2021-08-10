@@ -10,14 +10,21 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick-theme.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/css/animate.css">
+    <script src="/js/wow.min.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
 
 </head>
 
 <body>
+
     <div class="container_header">
         <div class="image_logo">
             <img src="../image/logo.jpg" class="logo">
@@ -140,112 +147,128 @@
     </script>
     <div id="business">
 
-        <div class="business_top">
+        <div class="wow fadeInUp business_top">
             <div class="business_areas">Lĩnh vực kinh doanh</div>
         </div>
         <div class="business_bottom">
             <div id="business_top"></div>
-            <div class="aspects">
+            <div class=" aspects">
                 <ul>
-                    <li class="lifirst">
+                    <li class="wow fadeInUp lifirst" id="li_child_first" wow-animation-delay="0s"
+                        wow-animation-duration="0s">
                         <i class="caret_right fas fa-caret-right"></i>
                         Nghiên cứu và phát triển
                     </li>
-                    <li class="lifirst">
+                    <li class="wow fadeInUp lifirst" id="li_child_second" wow-animation-delay="1.5s"
+                        wow-animation-duration="0s">
                         <i class="caret_right fas fa-caret-right"></i>
+
                         Thẩm định giá bất động sản
                     </li>
-                    <li class="lifirst">
+                    <li class="wow fadeInUp lifirst" id="li_child_third" wow-animation-delay="3s"
+                        wow-animation-duration="0s">
                         <i class="caret_right fas fa-caret-right"></i>
 
                         Tư vấn M&A bất động sản
                     </li>
-                    <li class="lifirst">
+                    <li class="wow fadeInUp lifirst" id="li_child_fourth" wow-animation-delay="3.5s"
+                        wow-animation-duration="0s">
                         <i class="caret_right fas fa-caret-right"></i>
-
                         Tư vấn phát triển dự án bất động sản
                     </li>
-                    <li class="lifirst">
+                    <li class="wow fadeInUp lifirst" id="li_child_fifth" wow-animation-delay="5.5s"
+                        wow-animation-duration="0s">
                         <i class="caret_right fas fa-caret-right"></i>
 
                         Tiếp thị và phân phối bất động sản
                     </li>
-                    <li class="lifirst">
+                    <li class="wow fadeInUp lifirst" id="li_child_sixth" wow-animation-delay="7s"
+                        wow-animation-duration="0s">
                         <i class="caret_right fas fa-caret-right"></i>
-
                         Quản lí-vận hành bất động sản
                     </li>
                 </ul>
             </div>
-            <div class="image_business"><img
+            <div class="wow bounceIn image_business"><img
                     src="http://dkra.vn/pictures/catalog/home/banner/banner-linh-vuc-kinh-doanh.jpg" id="image_business"
-                    alt="Lĩnh vực kinh doanh"></div>
+                    alt="Lĩnh vực kinh doanh">
+            </div>
         </div>
     </div>
     <div class="container_news">
-        <div class="news">Tin mới nhất</div>
+        <div class="wow bounceInUp news">Tin mới nhất</div>
 
-        <div id="news">
-            <a><i class="backleft_news fas fa-chevron-left"></i></a>
-            <div id="container_news_child">
-                <div class="box_news_first">
-                    <div class="newschild">
-                        <div class="image_news_first">
-                            <div id="image_news_first"><img
-                                    src="http://dkra.vn/pictures/catalog/tintuc/dkra-tin-tuc-noi-bo/KV-DKRA-SaleCampaign-WinTogether.jpg"
-                                    alt="" class="image_news">
+        <div id="news" class="wow bounce">
+            <div class="all_news">
+                <a class="wow bounceInUp"><i class="backleft_news fas fa-chevron-left"></i></a>
+                <a class="wow bounceInUp" wow-animation-delay="0s" wow-animation-duration="0s"><i
+                        class="backright_news fas fa-chevron-right"></i></a>
+                <div id="container_news_child">
+                    <div class="box_news_first ">
+                        <div class="newschild">
+                            <div class=" image_news_first">
+                                <div id="image_news_first"><img
+                                        src="http://dkra.vn/pictures/catalog/tintuc/dkra-tin-tuc-noi-bo/KV-DKRA-SaleCampaign-WinTogether.jpg"
+                                        alt="" class="image_news">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text_prize">DKRA VIETNAM KHỞI ĐỘNG MÙA ĐUA STRONGER.FASTER.WINTOGETHER, TỔNG
+                                    GIẢI
+                                    THƯỞNG
+                                    5 TỶ ĐỒNG</h3>
+                                <p id="text_prize">Với tổng giá trị giải thưởng lên đến 5 tỷ đồng, đây được xem là cuộc
+                                    đua
+                                    hoành
+                                    tráng nhất trong
+                                    lịch sử DKRA Vietnam suốt một thập kỷ qua. </p>
                             </div>
                         </div>
-                        <div>
-                            <h3 class="text_prize">DKRA VIETNAM KHỞI ĐỘNG MÙA ĐUA STRONGER.FASTER.WINTOGETHER, TỔNG GIẢI
-                                THƯỞNG
-                                5 TỶ ĐỒNG</h3>
-                            <p id="text_prize">Với tổng giá trị giải thưởng lên đến 5 tỷ đồng, đây được xem là cuộc đua
-                                hoành
-                                tráng nhất trong
-                                lịch sử DKRA Vietnam suốt một thập kỷ qua. </p>
-                        </div>
-                    </div>
-                    <div class="newschild">
-                        <div class="image_news_first">
-                            <div id="image_news_first"><img
-                                    src="http://dkra.vn/pictures/catalog/branding-tin-tuc/Hnh-1.jpg" alt=""
-                                    class="image_news">
+                        <div class="newschild">
+                            <div class="image_news_first">
+                                <div id="image_news_first"><img
+                                        src="http://dkra.vn/pictures/catalog/branding-tin-tuc/Hnh-1.jpg" alt=""
+                                        class="image_news">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text_prize">DKRA VIETNAM CÔNG BỐ BÁO CÁO THỊ TRƯỜNG BẤT ĐỘNG SẢN NHÀ Ở TP.HCM
+                                    &amp; VÙNG PHỤ CẬN QUÝ 2/2021</h3>
+                                <p></p>
                             </div>
                         </div>
-                        <div>
-                            <h3 class="text_prize">DKRA VIETNAM CÔNG BỐ BÁO CÁO THỊ TRƯỜNG BẤT ĐỘNG SẢN NHÀ Ở TP.HCM
-                                &amp; VÙNG PHỤ CẬN QUÝ 2/2021</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="newschild">
-                        <div class="image_news_first">
-                            <div id="image_news_first"><img
-                                    src="http://dkra.vn/pictures/catalog/giai-thuong/Asia-PacificBanner-01.jpg" alt=""
-                                    class="image_news">
+                        <div class="newschild">
+                            <div class="image_news_first">
+                                <div id="image_news_first"><img
+                                        src="http://dkra.vn/pictures/catalog/giai-thuong/Asia-PacificBanner-01.jpg"
+                                        alt="" class="image_news">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text_prize">ASIA PACIFIC PROPERTY AWARDS VINH DANH DKRA VIETNAM VỚI 3 GIẢI
+                                    THƯỞNG
+                                    DANH GIÁ</h3>
+                                <p id="text_prize">Lễ công bố giải thưởng Asia Pacific Property Awards 2021 vừa được tổ
+                                    chức
+                                    trực tuyến từ Vương quốc Anh vào ngày 28/5. Đọ sức cùng các đơn vị danh tiếng khu
+                                    vực
+                                    châu Á - Thái Bình Dương, sau nhiều vòng thẩm định nghiêm ngặt của Hội đồng giám
+                                    khảo
+                                    quốc tế, DKRA Vietnam đã được vinh danh ở 3 hạng mục giải thưởng quan trọng.</p>
                             </div>
                         </div>
-                        <div>
-                            <h3 class="text_prize">ASIA PACIFIC PROPERTY AWARDS VINH DANH DKRA VIETNAM VỚI 3 GIẢI THƯỞNG
-                                DANH GIÁ</h3>
-                            <p id="text_prize">Lễ công bố giải thưởng Asia Pacific Property Awards 2021 vừa được tổ chức
-                                trực tuyến từ Vương quốc Anh vào ngày 28/5. Đọ sức cùng các đơn vị danh tiếng khu vực
-                                châu Á - Thái Bình Dương, sau nhiều vòng thẩm định nghiêm ngặt của Hội đồng giám khảo
-                                quốc tế, DKRA Vietnam đã được vinh danh ở 3 hạng mục giải thưởng quan trọng.</p>
-                        </div>
-                    </div>
 
+                    </div>
                 </div>
+
             </div>
-            <a><i class="backright_news fas fa-chevron-right"></i></a>
             <script>
 
                 $(document).ready(function () {
                     $('.box_news_first').slick({
                         dots: true,
                         autoplay: true,
-                        autoplaySpeed: 500
+                        autoplaySpeed: 1000
                     });
                 })
                 $(".backleft_news").click(function () {
@@ -256,7 +279,7 @@
                 })
 
             </script>
-            <div class="box_news_second">
+            <div class="wow bounceInRight box_news_second">
                 <div class="box_news_child">
                     <div class="day_month">
                         <span class="day">18</span>
@@ -272,7 +295,8 @@
                     </div>
 
 
-                    <h3 class="title_day_month">MILLIONAIRE BROKERS THÁNG 4/2021: THỊ TRƯỜNG CĂN HỘ CAO CẤP - TIỀM
+                    <h3 class="title_day_month">MILLIONAIRE BROKERS THÁNG 4/2021: THỊ TRƯỜNG CĂN HỘ CAO CẤP -
+                        TIỀM
                         NĂNG VÀ CƠ HỘI</h3>
                 </div class="box_news_child">
                 <div class="box_news_child">
@@ -280,7 +304,8 @@
                         <span class="day">08</span>
                         <div>04/21</div>
                     </div>
-                    <h3 class="title_day_month">DKRA VIETNAM CÔNG BỐ BÁO CÁO THỊ TRƯỜNG BẤT ĐỘNG SẢN NHÀ Ở TP.HCM VÀ
+                    <h3 class="title_day_month">DKRA VIETNAM CÔNG BỐ BÁO CÁO THỊ TRƯỜNG BẤT ĐỘNG SẢN NHÀ Ở
+                        TP.HCM VÀ
                         VÙNG PHỤ CẬN QUÝ 1/2021
                     </h3>
                 </div>
@@ -298,174 +323,188 @@
                         <span class="day">22</span>
                         <div>01/21</div>
                     </div>
-                    <h3 class="title_day_month">HỆ THỐNG DKRA VIETNAM TỔNG KẾT HOẠT ĐỘNG KINH DOANH NĂM 2020</h3>
+                    <h3 class="title_day_month">HỆ THỐNG DKRA VIETNAM TỔNG KẾT HOẠT ĐỘNG KINH DOANH NĂM 2020
+                    </h3>
                 </div>
                 <button class="btn_news" type="button">Xem thêm</button>
             </div>
         </div>
     </div>
     <div class="container_event">
-        <div id="event_container">
+        <div id="event_container" class="wow fadeInDown">
             <div class="event1">
                 <div class="line"></div>
             </div>
-            <div class="event">Sự kiện</div>
+            <div class="event ">Sự kiện</div>
             <div class="event1">
                 <div class="line"></div>
             </div>
         </div>
-        <div class="btn_event">
+        <div class="btn_event wow fadeInUp" wow-animation-delay="0s" wow-animation-duration="0s">
             <div id="event_happen">
                 <a href="" class=event_happen>SỰ KIỆN ĐÃ DIỄN RA</a>
             </div>
         </div>
         <div id="image_event">
-            <div onclick="changeSlideLeft()">
-                <i class="backleft_event fas fa-chevron-left"></i>
-            </div>
-            <div class="image_event">
-
-                <div class="image_event_child">
-                    <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/rd-42021/1200x600-2.jpg" class="ta" alt="">
-                    </div>
-                    <h3 class="text_event">BÁO CÁO THỊ TRƯỜNG BĐS NHÀ Ở TP.HCM & VÙNG PHỤ CẬN QUÝ 1/2021</h3>
-
-                    <div class="day_event">
-                        <span class="numberseven">07</span>
-                        <span class="day_year_event">01-2021</span>
-                    </div>
+            <div class="wow fadeIn">
+                <div onclick="changeSlideLeft()">
+                    <i class=" backleft_event fas fa-chevron-left"></i>
                 </div>
-                <div class="image_event_child">
-                    <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/1-rd-tong-2020/1200x600-1.png" class="ta" alt="">
-                    </div>
-                    <h3 class="text_event">BÁO CÁO TOÀN CẢNH THỊ TRƯỜNG BĐS NHÀ Ở TP.HCM & VÙNG PHỤ CẬN: LỰC ĐẨY
-                        THỊ
-                        TRƯỜNG 2021</h3>
-                    <div class="day_event">
-                        <span class="numberseven">10</span>
-                        <span class="day_year_event">08-2021</span>
-                    </div>
-                </div>
-                <div class="image_event_child">
-                    <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/Untitled-1.jpg" class="ta" alt="">
+                <div class="image_event">
 
-                    </div>
-                    <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
-                        DOT
-                        PROPERTY VIETNAM AWARDS 2020</h3>
-                    <div class="day_event">
-                        <span class="numberseven">23</span>
-                        <span class="day_year_event">07-2021</span>
-                    </div>
-                </div>
-                <div class="image_event_child">
-                    <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/tab-su-kien/1200x600.jpg" class="ta" alt="">
-                    </div>
-                    <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
-                        DOT
-                        PROPERTY VIETNAM AWARDS 2020</h3>
-                    <div class="day_event">
-                        <span class="numberseven">23</span>
-                        <span class="day_year_event">07-2021</span>
-                    </div>
-                </div>
+                    <div class="image_event_child">
+                        <div class="image_child_second">
+                            <img src="http://dkra.vn/pictures/catalog/rd-42021/1200x600-2.jpg" class="ta" alt="">
+                        </div>
+                        <h3 class="text_event">BÁO CÁO THỊ TRƯỜNG BĐS NHÀ Ở TP.HCM & VÙNG PHỤ CẬN QUÝ 1/2021
+                        </h3>
 
-                <div class="image_event_child">
-                    <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/bc-rd-thang-3/1200x600new.jpg" class="ta" alt="">
+                        <div class="day_event">
+                            <span class="numberseven">07</span>
+                            <span class="day_year_event">01-2021</span>
+                        </div>
                     </div>
-                    <div class="">
-                        <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
+                    <div class="image_event_child">
+                        <div class="image_child_second">
+                            <img src="http://dkra.vn/pictures/catalog/1-rd-tong-2020/1200x600-1.png" class="ta" alt="">
+                        </div>
+                        <h3 class="text_event">BÁO CÁO TOÀN CẢNH THỊ TRƯỜNG BĐS NHÀ Ở TP.HCM & VÙNG PHỤ CẬN: LỰC
+                            ĐẨY
+                            THỊ
+                            TRƯỜNG 2021</h3>
+                        <div class="day_event">
+                            <span class="numberseven">10</span>
+                            <span class="day_year_event">08-2021</span>
+                        </div>
+                    </div>
+                    <div class="image_event_child">
+                        <div class="image_child_second">
+                            <img src="http://dkra.vn/pictures/catalog/Untitled-1.jpg" class="ta" alt="">
+
+                        </div>
+                        <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI
+                            THƯỞNG
                             DOT
                             PROPERTY VIETNAM AWARDS 2020</h3>
+                        <div class="day_event">
+                            <span class="numberseven">23</span>
+                            <span class="day_year_event">07-2021</span>
+                        </div>
                     </div>
-                    <div class="day_event">
-                        <span class="numberseven">23</span>
-                        <span class="day_year_event">07-2021</span>
-                    </div>
-                </div>
-                <div class="image_event_child">
-                    <div class="image_child_second">
-                        <img src="http://dkra.vn/pictures/catalog/bao-cao-r-d/1200x628-quang-cao-FB-01-01.jpg"
-                            class="ta" alt="">
-                    </div>
-                    <div class="">
-                        <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI THƯỞNG
+                    <div class="image_event_child">
+                        <div class="image_child_second">
+                            <img src="http://dkra.vn/pictures/catalog/tab-su-kien/1200x600.jpg" class="ta" alt="">
+                        </div>
+                        <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI
+                            THƯỞNG
                             DOT
                             PROPERTY VIETNAM AWARDS 2020</h3>
+                        <div class="day_event">
+                            <span class="numberseven">23</span>
+                            <span class="day_year_event">07-2021</span>
+                        </div>
                     </div>
-                    <div class="day_event">
-                        <span class="numberseven">23</span>
-                        <span class="day_year_event">07-2021</span>
+
+                    <div class="image_event_child">
+                        <div class="image_child_second">
+                            <img src="http://dkra.vn/pictures/catalog/bc-rd-thang-3/1200x600new.jpg" class="ta" alt="">
+                        </div>
+                        <div class="">
+                            <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI
+                                THƯỞNG
+                                DOT
+                                PROPERTY VIETNAM AWARDS 2020</h3>
+                        </div>
+                        <div class="day_event">
+                            <span class="numberseven">23</span>
+                            <span class="day_year_event">07-2021</span>
+                        </div>
+                    </div>
+                    <div class="image_event_child">
+                        <div class="image_child_second">
+                            <img src="http://dkra.vn/pictures/catalog/bao-cao-r-d/1200x628-quang-cao-FB-01-01.jpg"
+                                class="ta" alt="">
+                        </div>
+                        <div class="">
+                            <h3 class="text_event">DKRA VIETNAM GIỮ VỮNG PHONG ĐỘ VÀ BỨT PHÁ VỚI “CÚ ĐÚP” GIẢI
+                                THƯỞNG
+                                DOT
+                                PROPERTY VIETNAM AWARDS 2020</h3>
+                        </div>
+                        <div class="day_event">
+                            <span class="numberseven">23</span>
+                            <span class="day_year_event">07-2021</span>
+                        </div>
                     </div>
                 </div>
+                <div onclick="plusSlideEvent()">
+                    <i class="backright_event fas fa-chevron-right"></i>
+                </div>
             </div>
-
-            <div onclick="plusSlideEvent()"><i class="backright_event fas fa-chevron-right"></i></div>
-
             <div class="slide_event_end">
 
                 <div onclick="changeSlideLeft()" class="slide_event_child_end"></div>
                 <div onclick="plusSlideEvent()" class="slide_event_child_end"></div>
 
             </div>
-            <button type="button" class="see_event">XEM THÊM</button>
+
+            <button type="button" class="see_event wow fadeIn" data-wow-duration="2s">XEM THÊM</button>
 
         </div>
     </div>
     <div class="container_project">
-        <div class="title_project">Dự án triển khai</div>
+        <div class="title_project wow fadeInUp" data-wow-delay="0s" data-wow-duration="1s">Dự án triển khai</div>
 
         <div id="container_project">
             <div id="container_project_first">
-                <div id="ta">
+                <div id="ta" c class="wow rotateInDownLeft">
                     <img src="http://dkra.vn/pictures/catalog/astral-city/201030DKRH-ASTRAL-BINH-DUONGV01-STREET-VIEW-DEMFINAL-500x303.jpg"
                         alt="" class="image_project">
                 </div>
-                <div id="ta">
+                <div id="ta" class="wow rotateInDownLeft">
                     <div class="image_text_project">
                         <div class="triangle_box"></div>
                         <div class="text_project">
                             <h3 class="text_project_first">CITIGRAND</h3>
-                            <p class="text_project_second">CITIGRAND là dự án căn hộ chất lượng cao cấp đầu tiên tại
-                                Khu đô thị Cát Lái, Quận 2, sởhữu hệ thống tiện ích ấn tượng với vườn trên mái thời
+                            <p class="text_project_second">CITIGRAND là dự án căn hộ chất lượng cao cấp đầu tiên
+                                tại
+                                Khu đô thị Cát Lái, Quận 2, sởhữu hệ thống tiện ích ấn tượng với vườn trên mái
+                                thời
                                 thượng, 6 lõi không gianxanh xuyên suốt, hồ bơi vô cực, vườn kết nối</p>
                         </div>
                     </div>
                 </div>
-                <div id="ta">
+                <div id="ta" class="wow rotateInDownLeft">
                     <img src="http://dkra.vn/pictures/catalog/astral-city/201030DKRH-ASTRAL-BINH-DUONGV01-STREET-VIEW-DEMFINAL-500x303.jpg"
                         alt="" class="image_project">
                 </div>
-                <div id="ta">
+                <div id="ta" class="wow rotateInDownLeft">
                     <div class="image_text_project">
                         <div class="triangle_box"></div>
                         <div class="text_project">
                             <h3 class="text_project_first">HIEP PHUOC HARBOUR VIEW </h3>
-                            <p class="text_project_second">Đón đầu làn sóng ly tâm về khu đô thị Nam Sài Gòn,Hiep
+                            <p class="text_project_second">Đón đầu làn sóng ly tâm về khu đô thị Nam Sài
+                                Gòn,Hiep
                                 Phuoc Harbour View ra mắt sản phẩm đất nền sổ đỏ - sở hữu lâu dài nằm trên trục
                                 đường
                             </p>
                         </div>
                     </div>
                 </div>
-                <div id="ta">
+                <div id="ta" class="wow rotateInDownLeft">
                     <img src="http://dkra.vn/pictures/catalog/hiep-phuoc/CHP-v12-500x278.jpg" alt=""
                         class="image_project">
                 </div>
 
             </div>
             <div class="box-news-home">
-                <div id="ta">
+                <div id="ta" class="wow fadeInUp">
                     <div class="image_text_project">
                         <div class="triangle"></div>
                         <div class="text_project">
                             <h3 class="text_project_first">Phức Hợp Thương Mại & Căn Hộ Cao Cấp Astral City</h3>
-                            <p class="text_project_second">Hội tụ hàng loạt tiện ích đỉnh cao lần đầu tiên xuất tại
+                            <p class="text_project_second">Hội tụ hàng loạt tiện ích đỉnh cao lần đầu tiên xuất
+                                tại
                                 “thủ
                                 phủ
                                 công nghiệp” Bình Dương, “thành phố của những vì sao” Astral City mang đến không
@@ -476,13 +515,13 @@
                         </div>
                     </div>
                 </div>
-                <div id="ta">
+                <div id="ta" class="wow fadeInUp">
                     <div id="image_project">
                         <img src="http://dkra.vn/pictures/catalog/projects/2018/solvillas/banner-du-an-solvillas-avartar-500x314.jpg"
                             alt="" class="image_project">
                     </div>
                 </div>
-                <div id="ta">
+                <div id="ta" class="wow fadeInUp">
                     <div class="image_text_project">
                         <div class="poligon"></div>
                         <div class="text_project">
@@ -494,13 +533,13 @@
 
                     </div>
                 </div>
-                <div id="ta">
+                <div id="ta" class="wow fadeInUp">
                     <div id="image_project">
                         <img src="http://dkra.vn/pictures/catalog/projects/2019/wtp/1000x627x1-500x314.jpg" alt=""
                             class="image_project">
                     </div>
                 </div>
-                <div id="ta">
+                <div id="ta" class="wow fadeInUp">
                     <div class="image_text_project">
                         <div class="poligon"></div>
                         <div class="text_project">
@@ -515,7 +554,7 @@
             </div>
         </div>
         <div id="container_project_final">
-            <div class="container_project_final">
+            <div class="wow fadeIn container_project_final" data-wow-duration="1s">
                 <div class="project_final_child">
                     <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
@@ -530,10 +569,12 @@
 
                     <div class="onclick_project">
                         <h3 class="title_text_child">DKRA Vietnam</h3>
-                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS thương
+                        <p class="text_project_final">''Hat-trick'' giải thưởng “Đơn vị tư vấn dịch vụ BĐS
+                            thương
                             mại
                             tốt
-                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp thị
+                            nhất Việt Nam”, “Hệ thống phân phối BĐS xuất sắc nhất Việt Nam, “Đơn vị tư vấn tiếp
+                            thị
                             BĐS
                             tốt
                             nhất Việt Nam” tại Asia Pacific Property Awards năm 2021</p>
@@ -544,7 +585,7 @@
 
                 </div>
             </div>
-            <div class="container_project_final">
+            <div class="wow fadeIn container_project_final" data-wow-duration="1s">
                 <div class="project_final_child">
                     <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/2.-DKRA-n-v-phn-phi-bt-ng-sn-tt-nht-ng-Nam-.jpg"
@@ -567,7 +608,7 @@
                 </div>
 
             </div>
-            <div class="container_project_final">
+            <div class="wow fadeIn container_project_final" data-wow-duration="1s">
                 <div class="project_final_child">
                     <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/3.-DKRA-n-v-t-vn-pht-trin-d-n-tt-nht-ng-Nam-.jpg"
@@ -593,7 +634,7 @@
 
                 </div>
             </div>
-            <div class="container_project_final">
+            <div class="wow fadeIn container_project_final" data-wow-duration="1s">
                 <div class="project_final_child">
                     <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/4.-DKRA-n-v-phn-phi-bt-ng-sn-tt-nht-ng-Nam-.jpg"
@@ -625,7 +666,7 @@
                 </div>
 
             </div>
-            <div class="container_project_final">
+            <div class="wow fadeIn container_project_final" data-wow-duration="1s">
                 <div class="project_final_child">
                     <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
@@ -658,7 +699,7 @@
                 </div>
 
             </div>
-            <div class="container_project_final">
+            <div class="wow fadeIn container_project_final" data-wow-duration="1s">
                 <div class="project_final_child">
                     <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
@@ -691,7 +732,7 @@
                 </div>
 
             </div>
-            <div class="container_project_final">
+            <div class="wow fadeIn container_project_final" data-wow-duration="1s">
                 <div class="project_final_child">
                     <div class="project_final_child_child">
                         <img src="http://dkra.vn/pictures/catalog/giai-thuong/1.-DKRA-Asia-Pacific-Property-Awards.jpg"
@@ -726,13 +767,13 @@
     </div>
 
     <section id="container_partner">
-        <div id="partner_title">
+        <div id="partner_title" class="wow fadeInDown">
             <div class="partner_title_child"></div>
             <div class="title_partner">Đối tác</div>
             <div class="partner_title_child"></div>
         </div>
 
-        <div class="all_image_partner">
+        <div class="wow fadeIn all_image_partner" data-wow-duration="2s">
             <i class="backleft_partner fas fa-chevron-left"></i>
             <div class="company_partner">
                 <div class="company_partner_child">
@@ -808,7 +849,7 @@
         </script>
     </section>
     <section>
-        <div id="map">
+        <div id="map" class="wow fadeIn" data-wow-duration="1s">
             <script
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB530-d3OIqy45rPHfU-okFYnoE8kAmfX4&callback=initMap&libraries=&v=weekly"
                 async></script>
@@ -816,7 +857,7 @@
     </section>
     <footer>
         <div id="footer">
-            <div class="right_footer">
+            <div class="wow fadeInLeft right_footer" data-wow-duration="1s">
                 <h3 class="title_footer">CÔNG TY CỔ PHẦN DKRA VIỆT NAM (DKRA VIETNAM)</h3>
                 <ul class="company-info">
                     <li class="bt-location">
@@ -840,7 +881,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="left_footer">
+            <div class="wow fadeInRight left_footer" data-wow-duration="1s">
                 <div class="newletter">
                     <h3>ĐĂNG KÍ NHẬN TIN</h3>
                     <div class="form-newletter">
@@ -866,6 +907,10 @@
 
     <script type="text/javascript" src="/slick/slick-1.8.1/slick/slick.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src=" https://unpkg.com/aos@next/dist/aos.js "></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 </body>

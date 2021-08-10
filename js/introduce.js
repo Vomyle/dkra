@@ -147,6 +147,7 @@ function change(star, end) {
     }
 }
 
+// sr.reveal('.bar');
 
 
 

@@ -14,6 +14,13 @@
     <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/slick/slick-1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/animate.css">
+    <script src="/js/wow.min.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
 </head>
 <script>
     var progress = [
@@ -159,8 +166,18 @@
     </header>
     <section id="image_text_introduce">
 
-        <div id="text_introduce">
-            <div class="text_introduce_child">Giới thiệu</div>
+        <div id="text_introduce" data-aos="fade-right">
+            <div class="text_introduce_child"><span class="wow rotateInDownLeft">G</span>
+                <span class="wow rotateInDownLeft" data-wow-delay="0.1s">i</span>
+                <span class="wow rotateInDownLeft" data-wow-delay="0.2s">ớ</span>
+                <span class="wow rotateInDownLeft" data-wow-delay="0.3s">i</span>
+                <span class="wow rotateInDownLeft" data-wow-delay="0.4s">t</span>
+                <span class="wow rotateInDownLeft" data-wow-delay="0.5s">h</span>
+                <span class="wow rotateInDownLeft" data-wow-delay="0.6s">i</span>
+                <span class="wow rotateInDownLeft" data-wow-delay="0.7s">ệ</span>
+                <span class="wow rotateInDownLeft" data-wow-delay="0.8s">u</span>
+
+            </div>
         </div>
         <div>
 
@@ -170,14 +187,14 @@
     </section>
     <!-- hollow:rỗng -->
     <section id="container_directormessage">
-        <div id="container_directormessage_child_first">
+        <div id="container_directormessage_child_first" class="wow fadeInUp">
             <div class="text_hollow"></div>
             <div class="text_directormessage">
                 <h3>Thông điệp Tổng Giám Đốc</h3>
             </div>
         </div>
         <div id="container_directormessage_child_final">
-            <div data-aos="fade-up-left" class="text_directormessage_final">
+            <div class="wow fadeInLeft text_directormessage_final">
                 <p>Năm 2011, Công ty Cổ phần DKRA Việt Nam (DKRA Vietnam) được thành lập với tôn chỉ lấy uy tín, chính
                     trực và hiệu quả làm nền tảng. Qua 10 năm hình thành và phát triển, đó là kim chỉ nam, văn hóa chung
                     mà chúng tôi luôn tự hào gìn giữ và phát huy để làm nên giá trị khác biệt của DKRA Vietnam.
@@ -208,7 +225,7 @@
                 </p>
             </div>
             <!-- Foundation:sáng lập -->
-            <div class="image_manager">
+            <div class="image_manager wow fadeInRight" data-wow-delay="1s">
                 <img src="http://dkra.vn/pictures/catalog/about/a-Lam.jpg" alt="catalog/about/a-Lam.jpg"
                     class="manager">
                 <div class="text_director_finalchild">
@@ -220,17 +237,19 @@
     </section>
     <!-- cult system:hệ thống tôn chỉ -->
     <section id="cult_system">
-        <div id="cult_system_childfirst">
+        <div id="cult_system_childfirst" class="wow fadeInDown" data-wow-delay="0s" data-wow-duration="0s">
             <div class="text_cultsystem_hollow"></div>
             <div class="text_cultsystem">Hệ thống tôn chỉ</div>
             <div class="text_cultsystem_hollow"></div>
         </div>
         <div id="cult_system_childfinal">
             <div class="cult_system_childfinal_left">
-                <img src="http://dkra.vn/pictures/catalog/about/Vong-trong-cot-loi-02.png" class="
-                core_diagram" alt="Tầm nhìn">
-                <div id="text_locate">
-                    <h3>Định vị</h3>
+                <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+                    <img src="http://dkra.vn/pictures/catalog/about/Vong-trong-cot-loi-02.png" class="core_diagram"
+                        alt="Tầm nhìn">
+                </div>
+                <div id="text_locate" class="wow fadeInUp">
+                    <h3 class="animate__animated animate__slideInLeft">Định vị</h3>
                     <p>DKRA Vietnam - Nhà cung cấp giải pháp hiệu quả trong lĩnh vực dịch vụ bất động sản.</p>
                     <h4>Giá trị cốt lõi</h4>
                     <!-- common:chung -->
@@ -261,8 +280,8 @@
                 </div>
             </div>
             <div class="cult_system_childfinal_right">
-                <div id="vision">
-                    <h3>Tầm nhìn</h3>
+                <div id="vision" class="animate__animated animate__fadeInUp">
+                    <h3 class="animate__animated animate__slideInRight">Tầm nhìn</h3>
                     <p>DKRA Vietnam trở thành Thương hiệu Dịch vụ Bất động sản được tin tưởng lựa chọn đầu tiên tại Việt
                         Nam.</p>
                     <!-- mission:sứ mệnh -->
@@ -299,16 +318,18 @@
                     </div>
 
                 </div>
-                <img src="http://dkra.vn/pictures/catalog/about/DKRA-GiaTriCotLoi-01.png" alt="Định vị"
-                    class="image_locate">
+                <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+                    <img src="http://dkra.vn/pictures/catalog/about/DKRA-GiaTriCotLoi-01.png" alt="Định vị"
+                        class="image_locate ">
+                </div>
             </div>
         </div>
 
 
     </section>
     <section id="overview">
-        <h3>Tổng quan DKRA Vietnam</h3>
-        <div>
+      <h3 class="wow fadeIn">Tổng quan DKRA Vietnam</h3>
+        <div class="wow fadeInUp">
             <p>Được thành lập từ năm 2011, Công ty Cổ phần DKRA Việt Nam (DKRA Vietnam) là Nhà cung cấp giải pháp hiệu
                 quả
                 trong lĩnh vực Dịch vụ Bất động sản, hoạt động hướng đến mục tiêu trở thành Thương hiệu dịch vụ Bất động
@@ -335,13 +356,13 @@
         </div>
     </section>
     <section id="progress">
-        <h3>Qúa trình hình thành và phát triển</h3>
-        <div class="progress"></div>
+        <h3 class="wow fadeIn">Qúa trình hình thành và phát triển</h3>
+        <div class="progress wow fadeInUp"></div>
         <div class="progress_behind"></div>
         <div class="all_back_progress">
             <div onclick="plusleft()"><i class="backleft_progress same progress_back fas fa-chevron-left"></i></div>
             <div class="between_back"></div>
-           <div onclick="plusright()"><i class="backright_progress same fas fa-chevron-right"></i></div>
+            <div onclick="plusright()"><i class="backright_progress same fas fa-chevron-right"></i></div>
         </div>
     </section>
 
@@ -413,25 +434,25 @@
 
     </script>
     <section id="organizational_chart">
-        <div id="organizational_chart_child">
+        <div id="organizational_chart_child" class="wow fadeInDown" data-wow-delay=".8s" data-wow-duration="1s">
             <div class="organizational_chart_childhollow"></div>
             <div class="text_organizational_chart_child">Sơ đồ tổ chức</div>
             <div class="organizational_chart_childhollow"></div>
         </div>
-        <img src="http://dkra.vn/pictures/catalog/about/2021-So-do-to-chuc-02.jpg" class="img_chart"
+        <img src="http://dkra.vn/pictures/catalog/about/2021-So-do-to-chuc-02.jpg" class="img_chart wow fadeInUp"
             alt="Sơ đồ tổ chức">
     </section>
 
     <!-- leadership:ban lãnh đạo -->
     <section id="container_leadership">
-        <div id="leadership_child">
+        <div id="leadership_child"  class="wow fadeInDown" data-wow-delay=".8s" data-wow-duration="1s">
             <div class="leadership_hollow"></div>
             <div class="text_leadership">Ban lãnh đạo</div>
             <div class="leadership_hollow"></div>
         </div>
         <div>
             <ul class="member_list">
-                <li class="item_member_list_child">
+                <li class="item_member_list_child wow fadeInUp" data-wow-duration="1s">
                     <div class="item_member_list_pi">
                         <div class="text_item_member_list">
                             <h3>Ông <strong>Phạm Lâm</strong></h3>
@@ -447,7 +468,7 @@
                             alt="Phạm Lâm">
                     </div>
                 </li>
-                <li class="item_member_list_child">
+                <li class="item_member_list_child wow fadeInUp" data-wow-duration="1s">
                     <div class="item_member_list">
                         <img src="http://dkra.vn/pictures/catalog/about/new-member/AnhSang.png"
                             class="imag_leadership_left" alt="Nguyễn Văn Sáng">
@@ -465,7 +486,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="item_member_list_child">
+                <li class="item_member_list_child  wow fadeInUp" data-wow-duration="1s">
                     <div class="item_member_list_po">
                         <div class="text_item_member_list">
                             <h3>Ông <strong>Trần Hiếu</strong></h3>
@@ -489,13 +510,13 @@
         </div>
 
     </section>
-    <section id="Outstanding_Award">
-        <div class="Outstanding_Award_child">
+    <section id="Outstanding_Award" >
+        <div class="Outstanding_Award_child wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.8s" >
             <div class="Outstanding_Award_hollow"></div>
             <div class="text_Outstanding_Award">Giải thưởng tiêu biểu</div>
             <div class="Outstanding_Award_hollow"></div>
         </div>
-        <div class="two-column">
+        <div class="two-column wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
             <p>Với những giá trị mang đến cho khách hàng, đối tác, tâm huyết xây dựng nghề môi giới ngày càng chuyên
                 nghiệp và đóng góp tích cực vào sự phát triển của thị trường Bất động sản Việt Nam, DKRA Vietnam đã vinh
                 dự đón nhận hàng loạt giải thưởng danh giá như:
@@ -550,7 +571,7 @@
         </div>
     </section>
 
-    <section id="Outstanding_Award_second">
+    <section id="Outstanding_Award_second" class="wow fadeInUp" data-wow-duration="2s">
         <div onclick="plusSlide()"><i class="backleft ii fas fa-chevron-left"></i></div>
         <div class="img_text_Outstanding_Award">
 
@@ -627,60 +648,9 @@
         </div>
     </section>
 
-    <script>
-
-        // $(document).ready(function () {
-        //     $('.img_text_Outstanding_Award').slick({
-        //         dots: true,
-        //         infinite: false,
-        //         speed: 300,
-        //         slidesToShow: 3,
-        //         slidesToScroll: 3,
-
-        //         responsive: [
-        //             {
-
-        //                 settings: {
-        //                     slidesToShow: 2,
-        //                     slidesToScroll: 2,
-        //                     // infinite: true,
-        //                     // dots: true
-        //                 }
-        //             },
-        //             {
-
-        //                 settings: {
-        //                     // dots: true,
-
-        //                     slidesToShow: 1,
-        //                     slidesToScroll: 1
-        //                 }
-        //             },
-                    // {
-
-                    //     settings: {
-                    //         dots: true,
-
-                    //         slidesToShow: 1,
-                    //         slidesToScroll: 1
-                    //     }
-                    // }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-        //         ]
-        //     });
-        // })
-        // $(".backleft").click(function () {
-        //     $(".img_text_Outstanding_Award").slick('slickPrev');
-        // });
-        // $(".backright").click(function () {
-        //     $(".img_text_Outstanding_Award").slick('slickNext')
-        // })
-    </script>
     <footer>
         <div id="footer_introduce">
-            <div class="footer_introduce_child">
+            <div class="footer_introduce_child wow fadeInLeft"  data-wow-duration="1s">
                 <h3>ĐĂNG KÍ NHẬN TIN</h3>
                 <div class="form-newletter_introduc">
                     <form id="register_form" method="post">
@@ -690,7 +660,7 @@
                     </form>
                 </div>
             </div>
-            <div class="footer_introduce_child_second">
+            <div class="footer_introduce_child_second wow fadeInRight" data-wow-duration="1s">
                 <div class="copyright_introduce">2018 <strong>DKRA VN JSC</strong>. All Rights Reserved.</div>
                 <div>
                     <i class="icon_footer_introduce fab fa-facebook-square"></i>

@@ -200,7 +200,9 @@ button.slick-prev, button.slick-next {
     line-height: 120px;
     font-weight: 900;
     color: rgb(148, 146, 146);
+    
 }
+
 
 .business_top {
     border-left: 1px solid rgb(74, 74, 80);
@@ -257,9 +259,9 @@ button.slick-prev, button.slick-next {
     overflow: hidden;
 }
 
-#container_news_child {
+/* #container_news_child {
     width: 50%;
-}
+} */
 
 #news {
     display: flex;
@@ -281,8 +283,13 @@ button.slick-prev, button.slick-next {
     display: block;
     padding: 15px;
     margin: 0px 30px;
+    width: 87%;
+    height: 480px;
 }
-
+.all_news{
+    width: 50%;
+    position: relative;
+}
 .box_news_first:hover {
     background: red;
     color: white;
@@ -299,21 +306,27 @@ button.slick-prev, button.slick-next {
 
 .box_news_second {
     flex: 1;
+    padding-left: 30px;
 }
 
 .text_prize {
-    padding: 20px 0px;
+    padding: 11px 0px;
+    width: 88%;
 }
 
 #text_prize {
     display: block;
     font-size: 18px;
+    
 }
 
 .box_news_child {
     display: flex;
     margin-bottom: 10px;
     border: 1px solid#ddd;
+    width: 94%;
+    height: 77px;
+    
 }
 
 .box_news_child:hover {
@@ -338,21 +351,26 @@ button.slick-prev, button.slick-next {
 
 .title_day_month {
     padding-top: 14px;
-    font-size: 17px;
+    font-size: 15px;
+    padding-right: 10px;
+
 }
 
 .backleft_news {
-    font-size: 40px;
+    font-size: 47px;
     color: rgb(190, 190, 190);
-    padding: 240px 0 0 0px;
+    top: 35%;
+    left: -13px;
+    position: absolute;
 }
 
 .backright_news {
-    font-size: 40px;
+    font-size: 43px;
     color: rgb(190, 190, 190);
-    padding: 240px 20px 0 0;
+    position: absolute;
+    top: 35%;
+    right: 14px;
 }
-
 .btn_news {
     padding: 10px 30px;
     background: red;
@@ -461,7 +479,6 @@ button.slick-prev, button.slick-next {
     margin-top: 154px;
     color: rgb(185, 185, 185);
     left: 40px;
-    z-index: 10;
 }
 
 .backright_event {
@@ -1006,7 +1023,8 @@ div.company_partner_child {
     top: 50%;
     color: white;
     font-size: 30px;
-    padding: 0 70px;
+    width: 100%;
+    text-align: center;
     font-weight: 900;
 }
 
@@ -1219,7 +1237,6 @@ div.company_partner_child {
     margin-right: 10px;
 }
 
-
 .year_progress {
     padding-top: 30px;
     font-size: 56px;
@@ -1281,10 +1298,11 @@ div.company_partner_child {
     padding-bottom: 60px;
     padding-top: 20px;
 }
-.backleft_progress.same.progress_back.fas.fa-chevron-left.disable,
-.backright_progress.same.fas.fa-chevron-right.disable{
+
+.backleft_progress.same.progress_back.fas.fa-chevron-left.disable, .backright_progress.same.fas.fa-chevron-right.disable {
     opacity: 0.4;
 }
+
 .backleft_progress, .backright_progress {
     font-size: 49px;
     color: white;
@@ -1571,7 +1589,7 @@ div.company_partner_child {
 }
 
 #footer_introduce {
-    background: red;
+
     display: flex;
     justify-content: center;
     height: 170px;
@@ -1583,12 +1601,16 @@ div.company_partner_child {
     flex: 1;
     align-items: center;
     padding-left: 80px;
+    background: red;
+
 }
 
 .footer_introduce_child_second {
     display: flex;
     flex: 1;
     align-items: center;
+    background: red;
+
 }
 
 .footer_introduce_child h3 {
@@ -1618,6 +1640,7 @@ div.company_partner_child {
 .slide-page:hover {
     cursor: pointer;
 }
-.slide_outsanding{
+
+.slide_outsanding {
     text-align: center;
 }
